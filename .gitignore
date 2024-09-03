@@ -1,0 +1,28 @@
+docs/build
+*pyc
+
+# documentation artifacts
+html/*
+
+# otherwise CI thinks index not clean
+*.resolved
+
+*.DS_Store
+
+# project-specific
+
+Ex1-Training/ex1/ex_workspace/.catkin_tools
+Ex1-Training/ex1/ex_workspace/build
+Ex1-Training/ex1/ex_workspace/devel
+Ex1-Training/ex1/ex_workspace/logs
+
+Ex2-Sub-Launch/ex2/ex_workspace/.catkin_tools
+Ex2-Sub-Launch/ex2/ex_workspace/build
+Ex2-Sub-Launch/ex2/ex_workspace/devel
+Ex2-Sub-Launch/ex2/ex_workspace/logs
+
+
+Labs/Lab1-open-loopMM/lab1/ex_workspace/.catkin_tools
+Labs/Lab1-open-loopMM/lab1/ex_workspace/build
+Labs/Lab1-open-loopMM/lab1/ex_workspace/devel
+Labs/Lab1-open-loopMM/lab1/ex_workspace/logs
