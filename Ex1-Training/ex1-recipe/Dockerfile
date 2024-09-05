@@ -2,7 +2,7 @@
 # parameters
 ARG EXERCISE_NAME="ex1"
 ARG DESCRIPTION="Learning Experience about ROS (Robot Operating System)"
-ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
+ARG MAINTAINER="Shengtian Luo"
 
 # ==================================================>
 # ==> Do not change the code below this line
