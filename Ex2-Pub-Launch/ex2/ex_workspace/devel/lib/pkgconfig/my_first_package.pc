@@ -1,0 +1,1 @@
+/code/ex2/ex_workspace/devel/.private/my_first_package/lib/pkgconfig/my_first_package.pc

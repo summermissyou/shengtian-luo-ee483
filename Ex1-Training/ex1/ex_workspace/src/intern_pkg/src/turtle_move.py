@@ -5,17 +5,18 @@ from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 
 class TurtleMove: #class object
+    
     def __init__(self): #constructor method that intializes the object
         self.pub = rospy.Publisher('turtle/turtle1/cmd_vel', Twist, queue_size=10) #publisher
-
+        self.front=True 
     def talk(self): #defines method
         msg = Twist() #new message object we will added the turtle's movements
         if self.front: # Move ahead
             msg.linear.x = 1
         else: # Move back
-            msg.linear.xb = -1
+            msg.linear.x = -1
             self.front = True
-        rospy.loginfo(self.front)
+        rospy.loginfo(msg)
         self.pub.publish(msg) # publishes the Twist msg to the topic
         
         rate.sleep()

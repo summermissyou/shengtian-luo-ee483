@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /code/ex2/ex_workspace/devel/.private/my_first_package/setup.sh
