@@ -1,0 +1,22 @@
+<launch>
+
+<param name="publish_frequency" type= "double" value= "10.0"/>
+
+<!-- <include file = "$(find <my_first_package>)/launch/<my_launcher>.launch"/> -->
+<!-- Calling launch files from other packages -->
+
+<group ns = "navigation"> 
+<!-- Creating a group to group nodes. This afect the namespace of the topics -->
+<node pkg = "turtlesim" name= "turtlesim" type = "turtlesim_node" output="screen"/> 
+<!-- Running node my_node_script1.py from package <pkg_name> -->
+<node pkg = "my_first_package" name= "turtlesim_pose" type = "ex3_turtlesim_pose.py" output="screen" />
+<!-- Running node my_node_script2.py from package <pkg_name> -->
+<node pkg = "my_first_package" name= "turtlesim_move" type = "my_first_node.py" output="screen" />
+<node pkg = "my_first_package" name= "turtlesim_paremeter" type = "set_parameter_node.py" output="screen" />
+<node pkg="rostopic" name="rqt_graph" type="rqt_graph"/>
+<!-- Opens rqt_graph -->
+
+<node pkg="rostopic" name="rostopic" type="rostopic" output="screen" args="echo output_topic" />
+<!-- Echos the output_topic -->
+</group>
+</launch>

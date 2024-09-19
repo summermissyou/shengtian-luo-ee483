@@ -1,0 +1,3 @@
+Symlinking /code/ex3/ex_workspace/devel/share/my_first_package/cmake/my_first_packageConfig-version.cmake
+Symlinking /code/ex3/ex_workspace/devel/share/my_first_package/cmake/my_first_packageConfig.cmake
+Symlinking /code/ex3/ex_workspace/devel/lib/pkgconfig/my_first_package.pc

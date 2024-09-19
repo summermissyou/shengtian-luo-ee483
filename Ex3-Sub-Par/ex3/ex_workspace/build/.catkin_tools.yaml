@@ -1,0 +1,6 @@
+devel_space: /code/ex3/ex_workspace/devel
+install: false
+install_space: /code/ex3/ex_workspace/install
+profile: default
+source_space: /code/ex3/ex_workspace/src
+workspace: /code/ex3/ex_workspace

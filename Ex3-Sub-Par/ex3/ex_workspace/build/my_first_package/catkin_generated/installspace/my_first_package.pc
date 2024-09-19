@@ -1,0 +1,8 @@
+prefix=/code/ex3/ex_workspace/install
+
+Name: my_first_package
+Description: Description of my_first_package
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

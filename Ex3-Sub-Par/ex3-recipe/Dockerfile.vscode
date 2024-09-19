@@ -1,0 +1,75 @@
+# syntax=docker/dockerfile:1.4
+# parameters
+ARG EXERCISE_NAME="ex3"
+ARG DESCRIPTION="VSCode - Learning Experience about ROS (Robot Operating System)"
+ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
+
+# ==================================================>
+# ==> Do not change the code below this line
+ARG ARCH
+ARG DISTRO=daffy
+ARG DOCKER_REGISTRY=docker.io
+ARG BASE_IMAGE=dt-vscode
+ARG BASE_TAG=${DISTRO}-${ARCH}
+ARG LAUNCHER=default
+
+# define base image
+FROM ${DOCKER_REGISTRY}/duckietown/${BASE_IMAGE}:${BASE_TAG} as base
+
+# recall all arguments
+ARG DISTRO
+ARG EXERCISE_NAME
+ARG DESCRIPTION
+ARG MAINTAINER
+ARG BASE_TAG
+ARG BASE_IMAGE
+ARG LAUNCHER
+# - buildkit
+ARG TARGETPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+ARG TARGETVARIANT
+
+# check build arguments
+RUN dt-build-env-check "${EXERCISE_NAME}" "${MAINTAINER}" "${DESCRIPTION}"
+
+# define/create repository path
+ARG REPO_PATH="${CATKIN_WS_DIR}/src/${EXERCISE_NAME}"
+RUN mkdir -p "${REPO_PATH}"
+WORKDIR "${REPO_PATH}"
+
+# install apt dependencies
+COPY --from=recipe ./dependencies-apt.txt "/tmp/"
+RUN dt-apt-install /tmp/dependencies-apt.txt
+
+# install python3 dependencies
+ARG PIP_INDEX_URL="https://pypi.org/simple"
+ENV PIP_INDEX_URL=${PIP_INDEX_URL}
+COPY --from=recipe ./dependencies-py3.* "/tmp/"
+RUN python3 -m pip install -r /tmp/dependencies-py3.txt
+
+# copy the source code (recipe)
+COPY --from=recipe ./packages "${REPO_PATH}/packages"
+
+# store module metadata
+LABEL org.duckietown.label.module.type="exercise-vscode" \
+    org.duckietown.label.module.name="${EXERCISE_NAME}" \
+    org.duckietown.label.module.description="${DESCRIPTION}" \
+    org.duckietown.label.platform.os="${TARGETOS}" \
+    org.duckietown.label.platform.architecture="${TARGETARCH}" \
+    org.duckietown.label.platform.variant="${TARGETVARIANT}" \
+    org.duckietown.label.code.location="ND" \
+    org.duckietown.label.code.version.distro="${DISTRO}" \
+    org.duckietown.label.base.image="${BASE_IMAGE}" \
+    org.duckietown.label.base.tag="${BASE_TAG}" \
+    org.duckietown.label.maintainer="${MAINTAINER}"
+
+# <== Do not change the code above this line
+# <==================================================
+
+# source entrypoint in every bash session
+RUN echo "source /entrypoint.sh" >> /etc/bash.bashrc
+
+# setup vscode
+COPY --from=recipe assets/vscode/setup.sh /tmp/vscode_setup.sh
+RUN chmod +x /tmp/vscode_setup.sh && /tmp/vscode_setup.sh
