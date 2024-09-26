@@ -5,88 +5,83 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 import math
 
-class TurtleMove:
-    def __init__(self):
-        rospy.init_node('turtle_move_square', anonymous=True)
-        self.pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-        self.rate = rospy.Rate(10)  # 10Hz frequency
-        self.pose = Pose()
-        self.start_pose = None
-        rospy.Subscriber('/turtle1/pose', Pose, self.update_pose)  
+# Global variables to keep track of the pose
+x = 0
+y = 0
+theta = 0
 
-        self.twist = Twist()
-        self.square_size = 2.0  # edge length 
-        self.is_moving_forward = True
+# Pose callback function to update position and orientation
+def pose_callback(pose):
+    global x, y, theta
+    x = pose.x
+    y = pose.y
+    theta = pose.theta
 
-    def update_pose(self, data):
-        self.pose = data
+# Function to move the turtle forward a set distance
+def move(distance, speed):
+    velocity_message = Twist()
+    velocity_message.linear.x = speed
 
-        # node down original point
-        if self.start_pose is None:
-            self.start_pose = data
+    start_x = x
+    start_y = y
+    distance_traveled = 0
 
-    def move_forward(self, distance):
-        start_x = self.pose.x
-        start_y = self.pose.y
-        while not rospy.is_shutdown():
-            self.twist.linear.x = 1.0
-            self.twist.angular.z = 0.0
-            self.pub.publish(self.twist)
+    # Move forward until the desired distance is reached
+    while distance_traveled < distance:
+        rospy.loginfo(f"Turtle moving. Distance traveled: {distance_traveled:.2f}")
+        pub.publish(velocity_message)
+        rospy.sleep(0.1)
+        distance_traveled = math.sqrt((x - start_x) ** 2 + (y - start_y) ** 2)
 
-            # 计算乌龟移动的距离
-            distance_moved = math.sqrt((self.pose.x - start_x) ** 2 + (self.pose.y - start_y) ** 2)
-            if distance_moved >= distance:
-                break
+    # Stop the turtle once the distance is reached
+    velocity_message.linear.x = 0
+    pub.publish(velocity_message)
 
-            self.rate.sleep()
+# Function to rotate the turtle by a specific angle
+def rotate(angle, angular_speed):
+    velocity_message = Twist()
+    velocity_message.angular.z = angular_speed if angle > 0 else -angular_speed
 
-        self.stop()
+    # Calculate the target angle
+    current_angle = 0
+    rate = rospy.Rate(10)  # 10 Hz
 
-    def turn(self, angle):
-        start_angle = self.pose.theta
-        relative_angle = 0.0
-        angular_speed = 0.785  # angular velocity
+    # Rotate until the desired angle is reached
+    while abs(current_angle) < abs(angle):
+        rospy.loginfo(f"Turtle rotating. Current angle: {current_angle:.2f}")
+        pub.publish(velocity_message)
+        rate.sleep()
+        current_angle += angular_speed * 0.1  # 0.1 is the sleep time (rate of 10Hz)
 
-        while relative_angle < angle:
-            self.twist.linear.x = 0.0
-            self.twist.angular.z = angular_speed
-            self.pub.publish(self.twist)
+    # Stop the rotation
+    velocity_message.angular.z = 0
+    pub.publish(velocity_message)
 
-            # calculate turing angle
-            relative_angle = abs(self.pose.theta - start_angle)
-            self.rate.sleep()
+    def square_path():
+     rospy.init_node('turtlesim_square', anonymous=True)
 
-        self.stop()
+    # Subscribe to the turtle's pose topic to get the position and orientation
+    rospy.Subscriber('turtle1/pose', Pose, pose_callback)
 
-    def stop(self):
-        self.twist.linear.x = 0.0
-        self.twist.angular.z = 0.0
-        self.pub.publish(self.twist)
-        rospy.sleep(1)  # stop
+    global pub
+    pub = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size=10)
 
-    def move_square(self):
-        for _ in range(4):
-            self.move_forward(self.square_size)  # moving
-            self.turn(1.57)  # turn 90 degree
-        rospy.loginfo("stop")
-        
-        self.correct_final_position()
+    rospy.sleep(2)  # Give time to initialize
 
-    def correct_final_position(self):
-        
-        error_x = self.start_pose.x - self.pose.x
-        error_y = self.start_pose.y - self.pose.y
+    side_length = 2  # Define the length of one side of the square
+    speed = 1  # Speed of movement
+    angular_speed = math.radians(30)  # Speed of rotation in radians
 
-        
-        self.move_forward(abs(error_x))
+    for _ in range(4):
+        move(side_length, speed)  # Move forward by the side length
+        rospy.sleep(1)  # Pause briefly after moving forward
+        rotate(math.radians(90), angular_speed)  # Rotate 90 degrees
+        rospy.sleep(1)  # Pause briefly after rotating
 
-        
-        self.turn(1.57)  
-        self.move_forward(abs(error_y))
+    rospy.loginfo("Square path completed!")
 
 if __name__ == '__main__':
     try:
-        turtle_move = TurtleMove()
-        turtle_move.move_square()  
+        square_path()
     except rospy.ROSInterruptException:
         pass
