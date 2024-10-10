@@ -1,0 +1,1 @@
+/code/ex4/ex_workspace/devel/.private/img_proc_aux/lib/pkgconfig/img_proc_aux.pc

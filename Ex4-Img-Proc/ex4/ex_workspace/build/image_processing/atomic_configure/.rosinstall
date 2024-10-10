@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /code/ex4/ex_workspace/devel/.private/image_processing/setup.sh

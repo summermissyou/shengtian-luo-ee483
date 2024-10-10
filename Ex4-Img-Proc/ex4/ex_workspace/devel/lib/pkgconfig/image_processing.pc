@@ -1,0 +1,1 @@
+/code/ex4/ex_workspace/devel/.private/image_processing/lib/pkgconfig/image_processing.pc

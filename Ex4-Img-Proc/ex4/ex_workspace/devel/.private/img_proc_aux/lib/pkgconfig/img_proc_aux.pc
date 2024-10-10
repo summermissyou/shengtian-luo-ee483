@@ -1,0 +1,8 @@
+prefix=/code/ex4/ex_workspace/devel/.private/img_proc_aux
+
+Name: img_proc_aux
+Description: Description of img_proc_aux
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,22 @@
+<launch>
+
+<node pkg="img_proc_aux" name="crop" type="crop.py"/>
+<node pkg="img_proc_aux" name="red_filter" type="color_filter.py"/>
+<node pkg="img_proc_aux" name="cropped" type="crop.py"/>
+<node pkg="img_proc_aux" name="dilation" type="dilation.py"/>
+<node pkg="img_proc_aux" name="erosion" type="erosion.py"/>
+<node pkg="img_proc_aux" name="flip_image" type="flip_image.py"/>
+<node pkg="img_proc_aux" name="mask_op" type="mask_op.py"/>
+<node pkg="img_proc_aux" name="hsv" type="hsv.py"/>
+<node pkg="img_proc_aux" name="bgr_mask" type="bgr_color_filter.py"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_view_cropped" args="/image_cropped"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_red_filter" args="/red_filter"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_dilation" args="/dilation"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_erode" args="/erode"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_flipped" args="/flipped"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_red_mask" args="/red_mask"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_hsv" args="/hsv_image"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image_bgr_mask" args="/bgr_mask"/>
+<node pkg="img_proc_aux" name="image_pub_single" type="image_pub_single.py"/>
+
+</launch>

@@ -1,0 +1,24 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "files.exclude": {
+        ".gitignore": true,
+        ".pytest_cache": true,
+        ".dtproject": true
+    },
+    "workbench.tree.indent": 24,
+    "notebook.dragAndDropEnabled": false,
+    "workbench.colorTheme": "Default Light+",
+    "workbench.iconTheme": "vs-minimal",
+    "editor.suggest.showIcons": true
+}

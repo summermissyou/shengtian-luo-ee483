@@ -1,0 +1,5 @@
+img_proc_aux
+/code/ex4/ex_workspace/devel/.private/img_proc_aux/cmake.lock /code/ex4/ex_workspace/devel/./cmake.lock
+/code/ex4/ex_workspace/devel/.private/img_proc_aux/share/img_proc_aux/cmake/img_proc_auxConfig-version.cmake /code/ex4/ex_workspace/devel/share/img_proc_aux/cmake/img_proc_auxConfig-version.cmake
+/code/ex4/ex_workspace/devel/.private/img_proc_aux/share/img_proc_aux/cmake/img_proc_auxConfig.cmake /code/ex4/ex_workspace/devel/share/img_proc_aux/cmake/img_proc_auxConfig.cmake
+/code/ex4/ex_workspace/devel/.private/img_proc_aux/lib/pkgconfig/img_proc_aux.pc /code/ex4/ex_workspace/devel/lib/pkgconfig/img_proc_aux.pc

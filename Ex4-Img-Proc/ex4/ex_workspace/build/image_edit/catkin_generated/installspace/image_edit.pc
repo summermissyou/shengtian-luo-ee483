@@ -1,0 +1,8 @@
+prefix=/code/ex4/ex_workspace/install
+
+Name: image_edit
+Description: Description of image_edit
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

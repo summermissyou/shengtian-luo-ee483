@@ -1,0 +1,8 @@
+prefix=/code/ex4/ex_workspace/install
+
+Name: image_processing
+Description: Description of image_processing
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

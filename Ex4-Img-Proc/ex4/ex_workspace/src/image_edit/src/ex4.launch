@@ -1,0 +1,17 @@
+<launch>
+    <!-- Start the image publisher node -->
+    <node pkg="img_proc_aux" type="image_pub.py" name="image_pub" output="screen"/>
+
+    <!-- Start your image processing node -->
+    <node pkg="image_edit" type="image_editer.py" name="image_processing_node" output="screen"/>
+
+    <!-- rqt_image_view to visualize the original image -->
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view" args="/camera/image_raw"/>
+
+    <!-- rqt_image_view to visualize the cropped image -->
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_cropped" args="/image_cropped"/>
+
+    <!-- rqt_image_view to visualize the white-filtered image -->
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_white" args="/image_white"/>
+
+</launch>

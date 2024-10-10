@@ -1,0 +1,5 @@
+image_edit
+/code/ex4/ex_workspace/devel/.private/image_edit/cmake.lock /code/ex4/ex_workspace/devel/./cmake.lock
+/code/ex4/ex_workspace/devel/.private/image_edit/share/image_edit/cmake/image_editConfig-version.cmake /code/ex4/ex_workspace/devel/share/image_edit/cmake/image_editConfig-version.cmake
+/code/ex4/ex_workspace/devel/.private/image_edit/share/image_edit/cmake/image_editConfig.cmake /code/ex4/ex_workspace/devel/share/image_edit/cmake/image_editConfig.cmake
+/code/ex4/ex_workspace/devel/.private/image_edit/lib/pkgconfig/image_edit.pc /code/ex4/ex_workspace/devel/lib/pkgconfig/image_edit.pc
