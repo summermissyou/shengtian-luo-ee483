@@ -1,0 +1,8 @@
+<launch>
+
+<node pkg="img_proc_aux" name="crop" type="crop.py"/>
+<node pkg="img_proc_aux" name="image_pub" type="image_pub.py"/>
+<node pkg="img_proc_aux" name="image_sync" type="sync_subs.py"/>
+<node pkg="img_proc_aux" name="filter" type="color_filter.py"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="sync" args="/image_combined"/>
+</launch>

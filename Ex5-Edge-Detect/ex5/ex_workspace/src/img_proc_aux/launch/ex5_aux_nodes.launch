@@ -1,0 +1,11 @@
+<launch>
+
+<node pkg="img_proc_aux" name="image_pub" type="image_pub.py"/>
+<node pkg="img_proc_aux" name="image_edges" type="image_edges.py"/>
+<node pkg="img_proc_aux" name="image_adding_lines" type="image_adding_lines.py"/>
+<node pkg="img_proc_aux" name="image_blur" type="kernel_op.py"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="image" args="/image"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="imageedges" args="/image_edges"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="imagelines" args="/image_with_lines"/>
+<node pkg="rqt_image_view" type="rqt_image_view" name="imageblur" args="/image_gauss"/>
+</launch>

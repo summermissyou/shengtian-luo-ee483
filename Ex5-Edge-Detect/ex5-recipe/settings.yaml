@@ -1,0 +1,4 @@
+# Exercise settings file
+
+agent_base: template_ros
+ws_dir: "solution"
