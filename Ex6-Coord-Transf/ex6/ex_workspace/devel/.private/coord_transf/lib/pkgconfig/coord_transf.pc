@@ -1,0 +1,8 @@
+prefix=/code/ex6/ex_workspace/devel/.private/coord_transf
+
+Name: coord_transf
+Description: Description of coord_transf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

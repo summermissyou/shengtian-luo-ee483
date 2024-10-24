@@ -1,0 +1,13 @@
+<launch>
+    <!-- Start the sensor node -->
+    <node pkg="coord_transf" type="sensor.py" name="sensor_node" output="screen"/> 
+
+    <!-- Start the coord_transf node -->
+    <node pkg="coord_transf" type="coord_tran.py" name="coord_transf_node" output="screen"/>
+
+    <!-- Echo the robot_coord topic -->
+    <node pkg="rostopic" type="rostopic" name="echo_robot_coord" args="echo /robot_coord" output="screen"/>
+
+    <!-- Echo the world_coord topic -->
+    <node pkg="rostopic" type="rostopic" name="echo_world_coord" args="echo /world_coord" output="screen"/>
+</launch>

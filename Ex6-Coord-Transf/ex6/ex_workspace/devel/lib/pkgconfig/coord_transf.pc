@@ -1,0 +1,1 @@
+/code/ex6/ex_workspace/devel/.private/coord_transf/lib/pkgconfig/coord_transf.pc

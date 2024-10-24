@@ -1,0 +1,15 @@
+# challenge name(s); defaults to all compatible challenges
+# challenge: ["lx22-state-estimation"]
+challenge: ["lx22-modcon"]
+
+# conventions + format
+protocol: "aido2_db18_agent-z2"
+
+# any user label - displayed in "challenges list"
+user-label: "<EXERCISE_NAME_HERE>"
+
+# any JSON payload
+user-payload: {}
+
+# validation challenge
+validation_challenge: "aido-hello-sim-validation"
