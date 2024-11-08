@@ -1,0 +1,7 @@
+[  0%] Built target _odom_aux_generate_messages_check_deps_DistWheel
+[  0%] Built target _odom_aux_generate_messages_check_deps_Pose2D
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_cpp
+[ 40%] Built target odom_aux_generate_messages_cpp
+[100%] Built target odom_aux_generate_messages_py
+[100%] Built target odom_aux_generate_messages

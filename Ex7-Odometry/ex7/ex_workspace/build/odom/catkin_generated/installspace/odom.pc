@@ -1,0 +1,8 @@
+prefix=/code/ex7/ex_workspace/install
+
+Name: odom
+Description: Description of odom
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

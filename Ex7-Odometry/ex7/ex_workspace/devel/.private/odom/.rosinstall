@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /code/ex7/ex_workspace/devel/.private/odom/setup.sh

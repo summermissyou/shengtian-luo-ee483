@@ -1,0 +1,10 @@
+
+<launch>
+<include file="$(find odom_aux)/launch/odom_hw.launch"/>
+<!-- INCLUDE YOUR NODE HERE -->
+
+    <!-- Start the pose calculator node from the odom package -->
+    <node name="pose_calculator" pkg="odom" type="odometry.py" output="screen" />
+
+
+</launch>

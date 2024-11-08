@@ -1,0 +1,1 @@
+/code/ex7/ex_workspace/devel/.private/catkin_tools_prebuild/setup.zsh

@@ -1,0 +1,8 @@
+prefix=/code/ex7/ex_workspace/devel/.private/odom_aux
+
+Name: odom_aux
+Description: Description of odom_aux
+Version: 0.0.0
+Cflags: -I/code/ex7/ex_workspace/devel/.private/odom_aux/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs

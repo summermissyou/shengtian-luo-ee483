@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="odom_aux" name="wheel_tick_pub" type="wheel_tick_pub.py" />
+    <param name="output_folder" value="$(find odom_aux)" />
+    <node pkg="odom_aux" name="odom_graph" type="odom_graph.py"/>
+</launch>

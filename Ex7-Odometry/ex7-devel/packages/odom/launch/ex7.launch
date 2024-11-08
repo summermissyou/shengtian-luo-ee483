@@ -1,0 +1,6 @@
+
+<launch>
+<include file="$(find odom_aux)/launch/odom_hw.launch"/>
+<!-- INCLUDE YOUR NODE HERE -->
+  
+</launch>

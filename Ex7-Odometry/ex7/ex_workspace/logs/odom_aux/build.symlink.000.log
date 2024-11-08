@@ -1,0 +1,11 @@
+Symlinking /code/ex7/ex_workspace/devel/share/odom_aux/cmake/odom_auxConfig-version.cmake
+Symlinking /code/ex7/ex_workspace/devel/share/odom_aux/cmake/odom_aux-msg-paths.cmake
+Symlinking /code/ex7/ex_workspace/devel/share/odom_aux/cmake/odom_auxConfig.cmake
+Symlinking /code/ex7/ex_workspace/devel/share/odom_aux/cmake/odom_aux-msg-extras.cmake
+Symlinking /code/ex7/ex_workspace/devel/lib/python3/dist-packages/odom_aux/__init__.py
+Symlinking /code/ex7/ex_workspace/devel/lib/python3/dist-packages/odom_aux/msg/_Pose2D.py
+Symlinking /code/ex7/ex_workspace/devel/lib/python3/dist-packages/odom_aux/msg/_DistWheel.py
+Symlinking /code/ex7/ex_workspace/devel/lib/python3/dist-packages/odom_aux/msg/__init__.py
+Symlinking /code/ex7/ex_workspace/devel/lib/pkgconfig/odom_aux.pc
+Symlinking /code/ex7/ex_workspace/devel/include/odom_aux/DistWheel.h
+Symlinking /code/ex7/ex_workspace/devel/include/odom_aux/Pose2D.h
