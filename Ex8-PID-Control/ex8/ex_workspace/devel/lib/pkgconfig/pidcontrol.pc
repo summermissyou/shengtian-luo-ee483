@@ -1,0 +1,1 @@
+/code/ex8/ex_workspace/devel/.private/pidcontrol/lib/pkgconfig/pidcontrol.pc

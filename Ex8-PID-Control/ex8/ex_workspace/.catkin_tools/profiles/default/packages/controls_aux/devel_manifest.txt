@@ -1,0 +1,5 @@
+controls_aux
+/code/ex8/ex_workspace/devel/.private/controls_aux/cmake.lock /code/ex8/ex_workspace/devel/./cmake.lock
+/code/ex8/ex_workspace/devel/.private/controls_aux/share/controls_aux/cmake/controls_auxConfig-version.cmake /code/ex8/ex_workspace/devel/share/controls_aux/cmake/controls_auxConfig-version.cmake
+/code/ex8/ex_workspace/devel/.private/controls_aux/share/controls_aux/cmake/controls_auxConfig.cmake /code/ex8/ex_workspace/devel/share/controls_aux/cmake/controls_auxConfig.cmake
+/code/ex8/ex_workspace/devel/.private/controls_aux/lib/pkgconfig/controls_aux.pc /code/ex8/ex_workspace/devel/lib/pkgconfig/controls_aux.pc

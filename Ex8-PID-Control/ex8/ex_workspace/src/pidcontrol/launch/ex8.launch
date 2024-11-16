@@ -1,0 +1,10 @@
+<launch>
+   <!-- DO NOT CHANGE THE TWO LINES BELOW. It initializes the parameter and launches the controls_aux launch file  -->
+    <param name="controller_ready" type= 'string' value= 'false'/>
+    <include file="$(find controls_aux)/launch/start_dynamics.launch"/>
+    
+    <!-- ADD YOUR CONTROL NODE BELOW THIS LINE -->
+    <node pkg="pidcontrol" type="pidcontrol.py" name="pid_control_node" output="screen"> 
+    </node>
+    
+</launch>

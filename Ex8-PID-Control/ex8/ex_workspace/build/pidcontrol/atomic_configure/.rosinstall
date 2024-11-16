@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /code/ex8/ex_workspace/devel/.private/pidcontrol/setup.sh

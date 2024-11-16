@@ -1,0 +1,8 @@
+prefix=/code/ex8/ex_workspace/devel/.private/pidcontrol
+
+Name: pidcontrol
+Description: Description of pidcontrol
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

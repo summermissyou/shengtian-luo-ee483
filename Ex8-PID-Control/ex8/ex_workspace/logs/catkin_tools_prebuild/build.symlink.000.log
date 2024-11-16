@@ -1,0 +1,12 @@
+Symlinking /code/ex8/ex_workspace/devel/./setup.zsh
+Symlinking /code/ex8/ex_workspace/devel/./local_setup.sh
+Symlinking /code/ex8/ex_workspace/devel/./cmake.lock
+Symlinking /code/ex8/ex_workspace/devel/./local_setup.bash
+Symlinking /code/ex8/ex_workspace/devel/./setup.sh
+Symlinking /code/ex8/ex_workspace/devel/./setup.bash
+Symlinking /code/ex8/ex_workspace/devel/./_setup_util.py
+Symlinking /code/ex8/ex_workspace/devel/./env.sh
+Symlinking /code/ex8/ex_workspace/devel/./local_setup.zsh
+Symlinking /code/ex8/ex_workspace/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /code/ex8/ex_workspace/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /code/ex8/ex_workspace/devel/lib/pkgconfig/catkin_tools_prebuild.pc

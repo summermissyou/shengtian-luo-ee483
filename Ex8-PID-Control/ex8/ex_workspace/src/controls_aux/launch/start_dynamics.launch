@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="controls_aux" name="vehicle_dynamics" type="vehicle_dynamics.py" output="screen"/>
+    <node pkg="controls_aux" name="controls_graph" type="controls_graph.py"/>
+</launch>

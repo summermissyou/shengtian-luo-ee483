@@ -1,0 +1,8 @@
+prefix=/code/ex8/ex_workspace/devel/.private/controls_aux
+
+Name: controls_aux
+Description: Description of controls_aux
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

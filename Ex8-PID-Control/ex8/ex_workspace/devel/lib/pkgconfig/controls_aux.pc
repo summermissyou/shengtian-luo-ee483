@@ -1,0 +1,1 @@
+/code/ex8/ex_workspace/devel/.private/controls_aux/lib/pkgconfig/controls_aux.pc

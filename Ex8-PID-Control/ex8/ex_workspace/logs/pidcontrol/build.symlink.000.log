@@ -1,0 +1,3 @@
+Symlinking /code/ex8/ex_workspace/devel/share/pidcontrol/cmake/pidcontrolConfig.cmake
+Symlinking /code/ex8/ex_workspace/devel/share/pidcontrol/cmake/pidcontrolConfig-version.cmake
+Symlinking /code/ex8/ex_workspace/devel/lib/pkgconfig/pidcontrol.pc
